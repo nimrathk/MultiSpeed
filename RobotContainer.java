@@ -40,6 +40,9 @@ public class RobotContainer {
   private void configureBindings() {
     new JoystickButton(m_stickDrive, 6)
                 .whileTrue(new ArcadeDriveCmd(driveSubsystem, () -> m_stickDrive.getLeftY() * 0.5, () -> m_stickDrive.getLeftX() * 0.5));
-                // change turn speed for slow mode to make it faster
+                /* needed edits:
+                 * change turn speed for 'slow mode' to make it faster
+                 * add the numbers as constants in constants file
+                 */
   }
 }
